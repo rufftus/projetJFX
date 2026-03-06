@@ -1,22 +1,35 @@
 package com.example.projetjfx;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 public class HelloController {
     @FXML
-    private Label welcomeText;
+    private Label loginText;
     @FXML
-    private Button helloButton;
+    private TextField loginField;
     @FXML
-    private TextField nameField;
+    private PasswordField passwordField;
+    @FXML
+    private Button loginButton;
 
     @FXML
     protected void onHelloButtonClick() {
+        String login = loginField.getText();
+        String password =passwordField.getText();
 
-        welcomeText.setText("Welcome to JavaFX Application!");
-        helloButton.setText("Bravo "+nameField.getText()+"!");
+        if(!password.equals("mdp")){
+            loginText.setText("Identifiants incorrects");
+            loginText.setStyle("-fx-text-fill: red");
+        } else{
+            loginText.setText("Veuillez saisir vos identifiants");
+            loginText.setStyle("fx-text-fill: black");
+            Alert alert =new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("Hello "+login);
+            alert.showAndWait();
+            loginField.clear();
+            passwordField.clear();
+        }
+
     }
 }

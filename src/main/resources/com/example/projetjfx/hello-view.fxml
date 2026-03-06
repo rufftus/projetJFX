@@ -1,26 +1,39 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.projetjfx.HelloController">
+<VBox alignment="CENTER" prefHeight="191.0" prefWidth="294.0" spacing="5.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetjfx.HelloController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="25.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 
-    <Label fx:id="welcomeText"/>
+    <Label fx:id="loginText" prefHeight="17.0" prefWidth="154.0" text="Veuillez saisir vos identifiants">
+      <font>
+         <Font name="System Bold" size="11.0" />
+      </font>
+      <VBox.margin>
+         <Insets bottom="5.0" />
+      </VBox.margin></Label>
 
-    <HBox alignment="CENTER">
-        <Label text="nom: "/>
-        <TextField fx:id="nameField"/>
+    <HBox alignment="TOP_CENTER" prefHeight="25.0" prefWidth="191.0">
+        <Label text="login   " textAlignment="JUSTIFY" />
+        <TextField fx:id="loginField" alignment="CENTER">
+         <HBox.margin>
+            <Insets left="25.0" />
+         </HBox.margin></TextField>
     </HBox>
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Label alignment="CENTER" prefHeight="17.0" prefWidth="83.0" text="mot de passe  " />
+         <PasswordField fx:id="passwordField" />
+      </children>
+   </HBox>
 
-    <Button fx:id="helloButton" text="Hello!" onAction="#onHelloButtonClick"/>
+    <Button fx:id="loginButton" alignment="CENTER" onAction="#onLoginButtonClick" text="Se connecter">
+      <VBox.margin>
+         <Insets bottom="35.0" left="125.0" top="5.0" />
+      </VBox.margin></Button>
 </VBox>
