@@ -1,8 +1,12 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+
 
 <?import javafx.scene.control.Button?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
@@ -12,5 +16,11 @@
     </padding>
 
     <Label fx:id="welcomeText"/>
-    <Button fx:id="helloButton" text="Hello ilker!" onAction="#onHelloButtonClick"/>
+
+    <HBox alignment="CENTER">
+        <Label text="nom: "/>
+        <TextField fx:id="nameField"/>
+    </HBox>
+
+    <Button fx:id="helloButton" text="Hello!" onAction="#onHelloButtonClick"/>
 </VBox>
