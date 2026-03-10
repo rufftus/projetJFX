@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="191.0" prefWidth="294.0" spacing="5.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetjfx.HelloController">
+<VBox alignment="CENTER" prefHeight="191.0" prefWidth="294.0" spacing="5.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetjfx.LoginController">
     <padding>
         <Insets bottom="25.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -19,7 +19,7 @@
       </VBox.margin></Label>
 
     <HBox alignment="TOP_CENTER" prefHeight="25.0" prefWidth="191.0">
-        <Label text="login   " textAlignment="JUSTIFY" />
+        <Label prefWidth="50.0" text="login   " textAlignment="JUSTIFY" />
         <TextField fx:id="loginField" alignment="CENTER">
          <HBox.margin>
             <Insets left="25.0" />
@@ -27,7 +27,7 @@
     </HBox>
    <HBox prefHeight="100.0" prefWidth="200.0">
       <children>
-         <Label alignment="CENTER" prefHeight="17.0" prefWidth="83.0" text="mot de passe  " />
+         <Label alignment="CENTER" prefHeight="17.0" prefWidth="100.0" text="mot de passe  " />
          <PasswordField fx:id="passwordField" />
       </children>
    </HBox>

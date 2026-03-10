@@ -3,7 +3,7 @@ package com.example.projetjfx;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
-public class HelloController {
+public class LoginController {
     @FXML
     private Label loginText;
     @FXML
@@ -14,7 +14,7 @@ public class HelloController {
     private Button loginButton;
 
     @FXML
-    protected void onHelloButtonClick() {
+    protected void onLoginButtonClick() {
         String login = loginField.getText();
         String password =passwordField.getText();
 
