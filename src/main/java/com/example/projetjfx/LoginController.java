@@ -17,19 +17,26 @@ public class LoginController {
     protected void onLoginButtonClick() {
         String login = loginField.getText();
         String password =passwordField.getText();
+        loginText.setText("Veuillez saisir votre identifiants");
+        loginText.setStyle("fx-text-fill: black");
 
         if(!password.equals("mdp")){
             loginText.setText("Identifiants incorrects");
             loginText.setStyle("-fx-text-fill: red");
         } else{
-            loginText.setText("Veuillez saisir vos identifiants");
-            loginText.setStyle("fx-text-fill: black");
-            Alert alert =new Alert(Alert.AlertType.INFORMATION);
-            alert.setHeaderText("Hello "+login);
-            alert.showAndWait();
-            loginField.clear();
-            passwordField.clear();
+            loginText.setText("Hello "+login);
+            loginText.setStyle("-fx-text-fill: green");
+            loginText.setStyle("-fx-border-color: green; -fx-border-width: 2px");
         }
 
+    }
+    @FXML
+    protected void onLogoutButtonClick() {
+        String login = loginField.getText();
+        String password =passwordField.getText();
+        loginField.clear();
+        passwordField.clear();
+        loginText.setText("Veuillez saisir votre identifiants");
+        loginText.setStyle("fx-text-fill: black");
     }
 }
