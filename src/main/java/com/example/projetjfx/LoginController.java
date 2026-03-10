@@ -12,9 +12,12 @@ public class LoginController {
     private PasswordField passwordField;
     @FXML
     private Button loginButton;
+    @FXML
+    private Button logoutButton;
 
     @FXML
     protected void onLoginButtonClick() {
+
         String login = loginField.getText();
         String password =passwordField.getText();
         loginText.setText("Veuillez saisir votre identifiants");
@@ -25,13 +28,14 @@ public class LoginController {
             loginText.setStyle("-fx-text-fill: red");
         } else{
             loginText.setText("Hello "+login);
-            loginText.setStyle("-fx-text-fill: green");
-            loginText.setStyle("-fx-border-color: green; -fx-border-width: 2px");
+            loginText.setStyle("-fx-text-fill: green;-fx-border-color: green; -fx-border-width: 2px");
         }
 
     }
     @FXML
     protected void onLogoutButtonClick() {
+        logoutButton.setDisable(true);
+        loginButton.setDisable(false);
         String login = loginField.getText();
         String password =passwordField.getText();
         loginField.clear();
